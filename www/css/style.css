@@ -43,11 +43,15 @@ button {
     color: #fff;
     cursor: pointer;
 }
+button:hover{
+    background-color: #7777777a;
+}
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
 }
+
 
 .number {
     background-color: #333;
@@ -55,6 +59,10 @@ button {
 
 .operator, .function, .equal {
     background-color: #ff6600;
+    color: #fff;
+}
+.operator:hover, .function:hover, .equal:hover {
+    background-color: #ff6600a9;
     color: #fff;
 }
 
