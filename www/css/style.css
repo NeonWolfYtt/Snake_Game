@@ -1,30 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto&display=swap');
 
-html, body {
-    height: 100%;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Roboto", sans-serif;
 }
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f2f2f2;
+body,html{
+    background-color: #333;
 }
 
 .calculator {
-    display: grid;
-    height: 100%;
-    width: 100%;
-    justify-content: space-around;
-    grid-gap: 5px;
+    width: 100%; /* Stretch the whole width */
     background-color: #333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-rows: auto 1fr; /* Place input on top */
+    grid-gap: 5px;
+    justify-content: center;
 }
-
 
 #display {
     height: 100px;
+    width: auto;
     text-align: right;
     padding: 0 2rem;
     font-size: 2.5em;
@@ -34,24 +32,24 @@ body {
     border-radius: 5px 5px 0 0;
 }
 
-button {
-    width: 100%;
-    height: 80px; /* Adjusted height for better visibility on smaller screens */
-    font-size: 2em; /* Adjusted font size */
-    border: none;
-    background-color: #777;
-    color: #fff;
-    cursor: pointer;
-}
-button:hover{
-    background-color: #7777777a;
-}
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
 }
 
+button {
+    height: 80px;
+    font-size: 2em;
+    border: none;
+    background-color: #777;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7777777a;
+}
 
 .number {
     background-color: #333;
@@ -61,6 +59,7 @@ button:hover{
     background-color: #ff6600;
     color: #fff;
 }
+
 .operator:hover, .function:hover, .equal:hover {
     background-color: #ff6600a9;
     color: #fff;
@@ -74,14 +73,13 @@ button:hover{
 
 @media (max-width: 730px) {
     button {
-        font-size: 3em;
-        height: 150px;
-    }
-    .calculator {
-        justify-content: unset;
+        height: 100px; /* Adjust button height */
+        font-size: 1.5em; /* Adjust font size */
     }
     #display {
-        height: 200px;
-        font-size: 4.5em;
+        height: 150px;
+    }
+    .calculator{
+        justify-content: unset;
     }
 }
