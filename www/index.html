@@ -36,10 +36,9 @@
             
             <button class="number" onclick="appendToDisplay('.')">.</button>
             <button class="number" onclick="appendToDisplay('0')">0</button>
-            <button class="number" onclick="calculate()">=</button>
+            <button class="number" onclick="calculate(document.getElementById('display').value)">=</button>
 
             <button class="operator" onclick="appendToDisplay('/')">/</button>
-            
             
         </div>
     </div>
